@@ -295,3 +295,8 @@ time {
         opacity: 0;
     }
 }
+
+/*hide tag*/
+.hide {
+    display: none;
+}
