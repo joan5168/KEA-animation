@@ -1,7 +1,10 @@
-#scene {
+#screen {
     position: relative;
-    width 100vw;
-    height 56.25vw;
+    width: 100vw;
+    height: 56.25vw;
+    background-image: url(startsk%C3%A6rm.svg);
+    background-size: 100%;
+
 }
 
 
@@ -10,16 +13,30 @@
 
 
 
-#menu_background {
+/*
+
+#start {
     background-image: url(titelsk%C3%A6rm.svg);
-    background-size: cover;
-    width: 100%;
+    background-size: 100%;
+    width: 100vw;
     height: 55vw;
-    position: absolute;
-    display: none;
+    position: relative;
+    z-index: 1;
+    display: ;
 
 }
 
+*/
+
+#start {
+    position: relative;
+    width: 100vw;
+    height: 56.25vw;
+    background-image: url(titelsk%C3%A6rm.svg);
+    background-size: 100%;
+    z-index: 1;
+
+}
 
 
 
@@ -28,13 +45,15 @@
 #game {
     background-image: url(startsk%C3%A6rm.svg);
     background-size: 100%;
-    width: 100%;
+    width: 100vw;
     height: 55vw;
     position: absolute;
     z-index: 1;
-    display: ;
+    display: none;
 
 }
+
+/*
 
 #game_background {
     background-image: url(startsk%C3%A6rm.svg);
@@ -48,6 +67,7 @@
 }
 
 
+*/
 
 
 
@@ -196,19 +216,39 @@ time {
     display: none;
 }
 
-#start {
+
+#play {
     background-image: url(play.svg);
     background-repeat: no-repeat;
     background-size: 10%;
     position: absolute;
     width: 130vw;
     height: 20vw;
-    left: 41vw;
-    top: 25vw;
-    z-index: 1;
+    left: 41.5vw;
+    top: 16vw;
     transform: rotate(7deg);
-    display: none;
+    display: ;
 }
+
+
+
+#retry {
+    background-image: url(retry.svg);
+    background-repeat: no-repeat;
+    background-size: 4%;
+    position: absolute;
+    width: 130vw;
+    height: 40vw;
+
+    z-index: 1;
+
+}
+
+
+
+
+
+
 
 
 #settings {
@@ -237,7 +277,7 @@ time {
     height: 55vw;
 
     position: relative;
-    display: none;
+    display: ;
 }
 
 
@@ -299,4 +339,51 @@ time {
 /*hide tag*/
 .hide {
     display: none;
+}
+
+
+
+/*javascipt*/
+
+
+
+
+.pulse {
+    animation-name: pulse_kf;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+
+/*animation af p */
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(0.97);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+.fade_out {
+    animation-name: fadeout_kf;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout_kf {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
