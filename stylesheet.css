@@ -2,8 +2,7 @@
     position: relative;
     width: 100vw;
     height: 56.25vw;
-    background-image: url(startsk%C3%A6rm.svg);
-    background-size: 100%;
+
 
 }
 
@@ -48,8 +47,7 @@
     width: 100vw;
     height: 55vw;
     position: absolute;
-    z-index: 1;
-    display: none;
+    display: ;
 
 }
 
@@ -84,7 +82,7 @@
     height: 20vw;
     left: 60vw;
     top: 40vw;
-    z-index: 1;
+
 }
 
 
@@ -98,7 +96,7 @@
     height: 20vw;
     left: 45vw;
     top: 35vw;
-    z-index: 1;
+
     transform: rotate(-20deg);
 }
 
@@ -112,7 +110,7 @@
     height: 20vw;
     left: 35vw;
     top: 25vw;
-    z-index: 1;
+
     transform: rotate(70deg);
 }
 
@@ -125,7 +123,7 @@
     height: 20vw;
     left: 56vw;
     top: 18vw;
-    z-index: 1;
+
     transform: rotate(-70deg);
 
 }
@@ -139,7 +137,7 @@
     height: 20vw;
     left: 24vw;
     top: 40vw;
-    z-index: 1;
+
 }
 
 #plastikpose {
@@ -151,7 +149,7 @@
     height: 20vw;
     left: 23vw;
     top: 23vw;
-    z-index: 1;
+
     transform: rotate(-35deg);
 
 }
@@ -165,7 +163,7 @@
     height: 20vw;
     left: 70vw;
     top: 25vw;
-    z-index: 1;
+
     transform: rotate(1740deg);
 }
 
@@ -178,7 +176,7 @@
     height: 50vw;
     left: 0.0vw;
     top: 26vw;
-    z-index: 1;
+
     transform: rotate(20deg);
 }
 
@@ -191,7 +189,7 @@
     height: 30vw;
     left: 10vw;
     top: 43vw;
-    z-index: 1;
+
     transform: rotate(7deg);
 }
 
@@ -204,16 +202,42 @@
 
 
 
-#game_ui,
-points,
+
+
+
+
+
+#game_ui
 time {
     background-image: url(tidslinje.svg);
     background-size: cover;
     width: 90%;
     height: 20vw;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 1vw;
+    left: 16vw;
 
-    position: relative;
-    display: none;
+
+
+
+}
+
+
+
+#points {
+
+    position: absolute;
+    top: 7vw;
+    left: 43vw;
+
+    font-size: 5rem;
+    font-weight: 900;
+
+
+
+
 }
 
 
@@ -227,7 +251,7 @@ time {
     left: 41.5vw;
     top: 16vw;
     transform: rotate(7deg);
-    display: ;
+
 }
 
 
@@ -240,7 +264,6 @@ time {
     width: 130vw;
     height: 40vw;
 
-    z-index: 1;
 
 }
 
@@ -277,7 +300,7 @@ time {
     height: 55vw;
 
     position: relative;
-    display: ;
+
 }
 
 
@@ -300,7 +323,7 @@ time {
 
 
 
-.fadein {
+.fadeIn {
     animation-name: fadein_kf;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -311,23 +334,7 @@ time {
         opacity: 0;
     }
 
-    100% {
-        opacity: 1;
-    }
-}
-
-
-
-
-
-.fadeout {
-    animation-name: fadeout_kf;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes fadeout_kf {
-    0% {
+    50% {
         opacity: 1;
     }
 
@@ -336,10 +343,39 @@ time {
     }
 }
 
+
+
+
+.fadeOut {
+    animation-name: fadeout_kf;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadeout_kf {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
 /*hide tag*/
 .hide {
     display: none;
 }
+
+
+
 
 
 
@@ -357,7 +393,7 @@ time {
 }
 
 
-/*animation af p */
+/*animation */
 
 @keyframes pulse_kf {
     0% {
@@ -368,6 +404,8 @@ time {
         transform: scale(1);
     }
 }
+
+
 
 
 
