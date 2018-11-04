@@ -201,14 +201,7 @@
 
 
 
-
-
-
-
-
-
-#game_ui
-time {
+#game_ui time {
     background-image: url(tidslinje.svg);
     background-size: cover;
     width: 90%;
@@ -226,19 +219,31 @@ time {
 
 
 
-#points {
+/*#points {*/
 
+/*
     position: absolute;
     top: 7vw;
     left: 43vw;
 
     font-size: 5rem;
     font-weight: 900;
+*/
 
 
-
-
+#points {
+    position: absolute;
+    top: 39vw;
+    left: 11.4vw;
+    color: yellow;
+    width: 2.4rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    text-align: center;
+    font-feature-settings: tnum;
 }
+
+
 
 
 #play {
@@ -298,7 +303,7 @@ time {
 
     width: 100%;
     height: 55vw;
-
+    left: 22vw;
     position: relative;
 
 }
@@ -310,11 +315,12 @@ time {
     background-size: 45%;
     background-repeat: no-repeat;
 
-    width: 100%;
+    width: 90%;
     height: 55vw;
+    left: 27vw;
 
     position: relative;
-    display: none;
+
 }
 
 
@@ -425,3 +431,21 @@ time {
         opacity: 0;
     }
 }
+
+
+.dissappear {
+    animation-name: dissappear_kf;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.59, -0.56, .77, 1.34);
+    animation-fill-mode: forwards;
+}
+
+@keyframes dissappear_kf {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
