@@ -1,9 +1,19 @@
+html {
+    font-size: 2vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'helvetica', sans-serif;
+}
+
+
+
 #screen {
     position: relative;
     width: 100vw;
     height: 56.25vw;
-
-
 }
 
 
@@ -33,8 +43,7 @@
     height: 56.25vw;
     background-image: url(titelsk%C3%A6rm.svg);
     background-size: 100%;
-    z-index: 1;
-
+    z-index: 100;
 }
 
 
@@ -47,8 +56,6 @@
     width: 100vw;
     height: 55vw;
     position: absolute;
-    display: ;
-
 }
 
 /*
@@ -82,7 +89,6 @@
     height: 20vw;
     left: 60vw;
     top: 40vw;
-
 }
 
 
@@ -96,7 +102,6 @@
     height: 20vw;
     left: 45vw;
     top: 35vw;
-
     transform: rotate(-20deg);
 }
 
@@ -110,7 +115,6 @@
     height: 20vw;
     left: 35vw;
     top: 25vw;
-
     transform: rotate(70deg);
 }
 
@@ -123,9 +127,7 @@
     height: 20vw;
     left: 56vw;
     top: 18vw;
-
     transform: rotate(-70deg);
-
 }
 
 #papir {
@@ -137,7 +139,6 @@
     height: 20vw;
     left: 24vw;
     top: 40vw;
-
 }
 
 #plastikpose {
@@ -149,7 +150,6 @@
     height: 20vw;
     left: 23vw;
     top: 23vw;
-
     transform: rotate(-35deg);
 
 }
@@ -163,7 +163,6 @@
     height: 20vw;
     left: 70vw;
     top: 25vw;
-
     transform: rotate(1740deg);
 }
 
@@ -176,7 +175,6 @@
     height: 50vw;
     left: 0.0vw;
     top: 26vw;
-
     transform: rotate(20deg);
 }
 
@@ -189,7 +187,6 @@
     height: 30vw;
     left: 10vw;
     top: 43vw;
-
     transform: rotate(7deg);
 }
 
@@ -211,10 +208,7 @@
     position: absolute;
     top: 1vw;
     left: 16vw;
-
-
-
-
+    z-index: 3;
 }
 
 
@@ -240,7 +234,7 @@
     font-size: 2rem;
     font-family: sans-serif;
     text-align: center;
-    font-feature-settings: tnum;
+    z-index: 4;
 }
 
 
@@ -256,7 +250,6 @@
     left: 41.5vw;
     top: 16vw;
     transform: rotate(7deg);
-
 }
 
 
@@ -264,63 +257,106 @@
 #retry {
     background-image: url(retry.svg);
     background-repeat: no-repeat;
-    background-size: 4%;
+    background-size: 6%;
     position: absolute;
     width: 130vw;
     height: 40vw;
-
-
+    top: 27vw;
+    left: 46vw;
+    z-index: 5;
 }
 
 
 
 
+#setting_push1 {
+    background-image: url(menu.svg);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    height: 6vw;
+    width: 9vw;
+    position: absolute;
+    left: 86vw;
+    top: 2vw;
+    z-index: 4;
+}
 
 
 
+#setting_push {
+    background-image: url(menu.svg);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    height: 6vw;
+    width: 9vw;
+    position: absolute;
+    left: 86vw;
+    top: 2vw;
+    z-index: 1;
+}
 
-#settings {
 
+
+/*
+
+#setting_screen {
     background-image: url(setting.svg);
     background-size: 60%;
     background-repeat: no-repeat;
-
     width: 100%;
     height: 55vw;
+    position: absolute;
+    text-align: center;
+}
+*/
 
-    position: relative;
-    display: none;
+#setting_screen {
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    width: 60vw;
+    height: 45vw;
+    background-color: rgba(239, 151, 32, 0.86);
+    top: 5vw;
+    left: 20vw;
+    border-radius: 2vw;
+    color: white;
+    z-index: 4;
+}
+
+#setting_close {
+    position: absolute;
+    left: 56vw;
+    top: 2vw;
+    width: 2vw;
+    height: 2vw;
+    background-image: url(grey_close_x.svg);
+    background-size: 100%;
 }
 
 
-
-
 #gameover {
-
     background-image: url(gameover.svg);
     background-size: 60%;
     background-repeat: no-repeat;
-
     width: 100%;
     height: 55vw;
     left: 22vw;
+    bottom: 0vw;
     position: relative;
-
+    z-index: 4;
 }
 
 
 #levelcomplete {
-
     background-image: url(vundet.svg);
     background-size: 45%;
     background-repeat: no-repeat;
-
     width: 90%;
     height: 55vw;
     left: 27vw;
-
     position: relative;
-
+    z-index: 4;
 }
 
 
@@ -380,6 +416,9 @@
     display: none;
 }
 
+.show {
+    display: none;
+}
 
 
 
@@ -410,8 +449,6 @@
         transform: scale(1);
     }
 }
-
-
 
 
 
@@ -448,4 +485,119 @@
 
     to {
         transform: scale(0);
+    }
+
+
+
+    /*   LYD*/
+
+    #sfx,
+    #music {
+        background-size: 500% 100%;
+        width: 10vw;
+        height: 10vw;
+        display: inline-block;
+    }
+
+
+    .on {
+
+        background-color: green;
+    }
+
+    .off {
+
+        background-color: red;
+    }
+
+
+
+    .good {
+        background-image: url(bananskrald.svg);
+        background-image: url(flaske.svg);
+        background-image: url(katon.svg);
+        background-image: url(papir.svg);
+        background-image: url(vinflaske.svg);
+        background-image: url(aable.svg);
+        background-repeat: no-repeat;
+    }
+
+
+    .bad {
+        background-image: url(sug.svg);
+        background-image: url(drink.svg);
+        background-image: url(plastikpose.svg);
+        background-repeat: no-repeat;
+    }
+
+
+    /*SPRITE*/
+
+    #sfx_sprite,
+    #music_sprite {
+        background-size: 500% 100%;
+        width: 10vw;
+        height: 10vw;
+        background-image: url(Toggle_sprite.svg);
+        position: absolute;
+        display: inline-block;
+        z-index: 3;
+
+    }
+
+    #sfx_sprite {
+        top: 20vw;
+        bottom: 30vw;
+        position: absolute;
+    }
+
+
+    #music_sprite {
+        top: 15vw;
+        bottom: 40vw;
+        position: absolute;
+
+    }
+
+
+
+
+
+
+    .on {
+        background-position: 0;
+        /*    background-color: green;*/
+    }
+
+    .off {
+        background-position: -400% 0;
+        /*    background-color: red;*/
+    }
+
+
+    .off_on {
+        animation-name: on_off_kf;
+        animation-direction: reverse;
+        animation-duration: 0.1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        animation-timing-function: steps(4);
+    }
+
+    .on_off {
+        animation-name: on_off_kf;
+        animation-duration: 0.1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        animation-timing-function: steps(4);
+    }
+
+    @keyframes on_off_kf {
+        0% {
+            background-position: 0 0;
+        }
+
+        100% {
+            background-position: -400% 0;
+        }
     }

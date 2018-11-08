@@ -11,52 +11,83 @@
     <div id="screen">
         <div id="menu_background"></div>
         <div id="game">
+            <div id="points" class="hide"></div>
             <div id="game_background" class=""></div>
             <div id="start" class="hide">
                 <div id="play"></div>
-            </div>
-
-
-
-
-            <div id="game_elements">
-
-                <div id="bananskrald" class="fadeIn, fadeOut"></div>
-                <div id="drink" class="fadeOut, fadeIn"></div>
-                <div id="flaske" class="fadeIn, fadeOut"></div>
-                <div id="katon" class="fadeOut, fadeIn"></div>
-                <div id="papir" class="fadeOut, fadeIn"></div>
-                <div id="plastikpose" class="fadeIn, fadeOut"></div>
-                <div id="sug" class="fadeOut, fadeIn"></div>
-                <div id="vinflaske" class="fadeOut, fadeIn"></div>
-                <div id="aable" class="fadeIn, fadeOut"></div>
+                <div id="setting_push1"></div>
+                <!--                                <div id="setting_push2"></div> menu på forskærmen-->
 
             </div>
+        </div>
 
 
 
-            <div id="game_ui">
-                <div id="points" class="hide"></div>
-                <div id="energy" class="hide"></div>
-                <div id="time" class="hide"></div>
-                <div id="retry" class="hide"></div>
+        <div id="game_elements">
 
-            </div>
+            <div id="bananskrald" class="fadeIn, fadeOutxs good"></div>
+            <div id="drink" class="fadeOut, fadeIn bad"></div>
+            <div id="flaske" class="fadeIn, fadeOut good"></div>
+            <div id="katon" class="fadeOut, fadeIn good"></div>
+            <div id="papir" class="fadeOut, fadeIn good"></div>
+            <div id="plastikpose" class="fadeIn, fadeOut bad"></div>
+            <div id="sug" class="fadeOut, fadeIn bad"></div>
+            <div id="vinflaske" class="fadeOut, fadeIn good"></div>
+            <div id="aable" class="fadeIn, fadeOut good"></div>
+        </div>
+
+
+
+        <div id="game_ui">
+            <div id="energy" class="hide"></div>
+            <div id="time" class="hide"></div>
+            <div id="retry" class="hide"></div>
 
         </div>
 
 
-        <div id="start" class="hide">
-            <div id="play"></div>
-        </div>
+
+
 
         <div id="settings" class="hide"></div>
         <div id="gameover" class="hide"></div>
         <div id="levelcomplete" class="hide"></div>
 
-    </div>
+        <div id="setting_push"></div>
 
-    <script src="script.js"></script>
+        <div id="setting_screen" class="hide">
+
+
+            <div id="setting_effekt_sound">
+                <h1>Effekter</h1>
+                <div id="sfx" class="on">
+                    <div id="sfx_sprite"></div>
+                </div>
+            </div>
+
+
+            <div id="setting_music">
+                <h1>Musik</h1>
+                <div id="music" class="on">
+                    <div id="music_sprite"></div>
+                </div>
+            </div>
+            <div id="setting_close"></div>
+        </div>
+
+
+
+        <audio id="mymusic" src="lyd_til_trash_spil/musik.mp3">musik.mp3</audio>
+        <audio id="sfx1" src="lyd_til_trash_spil/yay.mp3">musik.mp3</audio>
+        <audio id="sfx2" src="lyd_til_trash_spil/arg.mp3">musik.mp3</audio>
+        <audio id="sfx3" src="lyd_til_trash_spil/wuhu.mp3">musik.mp3</audio>
+        <audio id="sfx4" src="lyd_til_trash_spil/boo.mp3">musik.mp3</audio>
+
+
+
+        <script src="script.js"></script>
+
+    </div>
 
 </body>
 
