@@ -48,6 +48,7 @@ body {
 
 
 
+
 /*spilleskærm*/
 
 #game {
@@ -208,7 +209,7 @@ body {
     position: absolute;
     top: 1vw;
     left: 16vw;
-    z-index: 3;
+    z-index: 5;
 }
 
 
@@ -227,17 +228,29 @@ body {
 
 #points {
     position: absolute;
-    top: 39vw;
-    left: 11.4vw;
-    color: yellow;
+    top: 2vw;
+    left: 78vw;
+    color: #196019;
     width: 2.4rem;
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-family: sans-serif;
     text-align: center;
-    z-index: 4;
+    z-index: 5;
+    font-weight: bold;
 }
 
-
+#time {
+    position: absolute;
+    top: 3vw;
+    left: 5vw;
+    color: #196019;
+    width: 2.4rem;
+    font-size: 2.4rem;
+    font-family: sans-serif;
+    text-align: center;
+    z-index: 104;
+    font-weight: bold;
+}
 
 
 #play {
@@ -253,7 +266,6 @@ body {
 }
 
 
-
 #retry {
     background-image: url(retry.svg);
     background-repeat: no-repeat;
@@ -263,9 +275,21 @@ body {
     height: 40vw;
     top: 27vw;
     left: 46vw;
-    z-index: 5;
+    z-index: 100;
 }
 
+
+#retry2 {
+    background-image: url(retry.svg);
+    background-repeat: no-repeat;
+    background-size: 6%;
+    position: absolute;
+    width: 130vw;
+    height: 40vw;
+    top: 22vw;
+    left: 46vw;
+    z-index: 99;
+}
 
 
 
@@ -321,8 +345,14 @@ body {
     left: 20vw;
     border-radius: 2vw;
     color: white;
-    z-index: 4;
+    z-index: 101;
 }
+
+
+
+
+
+
 
 #setting_close {
     position: absolute;
@@ -344,7 +374,7 @@ body {
     left: 22vw;
     bottom: 0vw;
     position: relative;
-    z-index: 4;
+    z-index: 5;
 }
 
 
@@ -356,7 +386,7 @@ body {
     height: 55vw;
     left: 27vw;
     position: relative;
-    z-index: 4;
+    z-index: 5;
 }
 
 
@@ -500,17 +530,6 @@ body {
     }
 
 
-    .on {
-
-        background-color: green;
-    }
-
-    .off {
-
-        background-color: red;
-    }
-
-
 
     .good {
         background-image: url(bananskrald.svg);
@@ -541,7 +560,9 @@ body {
         background-image: url(Toggle_sprite.svg);
         position: absolute;
         display: inline-block;
-        z-index: 3;
+        z-index: 102;
+        border: 2px;
+        border-color: red;
 
     }
 
@@ -549,6 +570,8 @@ body {
         top: 20vw;
         bottom: 30vw;
         position: absolute;
+        z-index: 300;
+        background-image: url(Toggle_sprite.svg);
     }
 
 
@@ -556,9 +579,41 @@ body {
         top: 15vw;
         bottom: 40vw;
         position: absolute;
+        z-index: 300;
+    }
+
+
+    #skraldespand_container {
+        position: absolute;
+    }
+
+
+
+    skraldespand_sprite {
+        width: 18vw;
+        height: 18vw;
+        background-image: url(skraldespand_sprite.svg);
+        background-size: 500% 100%;
+        z-index: 300;
 
     }
 
+    .blink {
+        animation-name: blink_kf;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(3);
+    }
+
+    @keyframes blink_kf {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: -400% 0%;
+        }
+    }
 
 
 

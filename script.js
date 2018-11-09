@@ -1,5 +1,5 @@
 window.addEventListener("load", sidenVises);
-let timeLeft = 10; // variablen viser art dert kører 10 gange
+let timeLeft = 10; // variablen viser at den kører 10 gange
 let score = 0;
 
 let showSettingsEffektSound = true;
@@ -28,6 +28,10 @@ function showStart() {
 
     document.querySelector("#setting_effekt_sound").addEventListener("click", toggleSounds);
     document.querySelector("#setting_music").addEventListener("click", toggleMusic);
+
+
+    document.querySelector("#retry").classList.add("hide");
+    document.querySelector("#retry2").classList.add("hide");
 }
 
 
@@ -43,13 +47,13 @@ function showSettings() {
     document.querySelector("#sfx").addEventListener("click", toggleSounds);
     document.querySelector("#music").addEventListener("click", toggleMusic);
 
+
 }
 
 
 function hideSettings() {
     console.log("hideSettings");
     document.querySelector("#setting_screen").classList.add("hide");
-
 }
 
 
@@ -93,8 +97,7 @@ function startGame() {
     document.querySelector("#setting_push").addEventListener("click", showSettings);
     document.querySelector("#setting_close").addEventListener("click", showSettings);
 
-
-
+    document.querySelector("#time").innerHTML = timeLeft;
     timeLeftFc();
 }
 
@@ -127,7 +130,6 @@ function plusClickHandler() {
 
         document.querySelector("#sfx2").currentTime = 0;
         document.querySelector("#sfx2").play();
-
     }
 }
 
@@ -173,6 +175,8 @@ function timeLeftFc() {
 
     //timeleft er variablen øverst, som vi har sat i minus, fordi siden skal falde.
 
+    document.querySelector("#time").innerHTML = timeLeft;
+
 
     if (timeLeft > 0) {
         timeLeft--;
@@ -186,7 +190,6 @@ function timeLeftFc() {
 
 function toggleSounds() {
     console.log("toggleSounds");
-
 
     if (showSettingsEffektSound == false) {
         showSettingsEffektSound = true;
@@ -244,9 +247,9 @@ function toggleMusic() {
 
         //        musicOn();
 
-    } else {
+    } else
 
-        showSettingsEffektSound = false;
+        showSettingsEffektSound = false; {
         document.querySelector("#music_sprite").classList.add("on_off");
         document.querySelector("#music_sprite").classList.remove("off_on");
         document.querySelector("#music_sprite").addEventListener("animationend", soundsOff); //tænde for lyden
@@ -255,17 +258,36 @@ function toggleMusic() {
 }
 
 function musicOff() {
-    console.log("musicOff function værdi er " + showSettingsEffektSound);
+    console.log("musicOff function værdi er " + showSettingsMusic);
 
     //    her slukkes for musikken
 
     document.querySelector("#musik").pause();
+
+    document.querySelector("#music_sprite").classList.remove("on_off");
+    document.querySelector("#music_sprite").classList.add("off");
+
+    //    her slukkes for sfx
+    document.querySelector("#sfx1").muted = true;
+    document.querySelector("#sfx2").muted = true;
 }
 
 function musicOn() {
-    console.log("musicOn function værdi er " + showSettingsEffektSound);
+    console.log("musicOn function værdi er " + showSettingsMusic);
 
     //    her tændes for musikken
+
+
+
+    document.querySelector("#music_sprite").classList.remove("off_on");
+    document.querySelector("#music_sprite").classList.add("on");
+
+    //    her tændes for sfx
+    document.querySelector("#sfx1").muted = false;
+    document.querySelector("#sfx2").muted = false;
+
+
+
 
     document.querySelector("#musik").play();
 }
@@ -277,30 +299,46 @@ function gameStatus() {
         document.querySelector("#gameover").classList.remove("hide");
         document.querySelector("#mymusic").pause();
 
+        document.querySelector("#sfx4").currentTime = 0;
         document.querySelector("#sfx4").play();
 
+        document.querySelector("#retry").addEventListener("click", showStart);
+        document.querySelector("#retry").classList.remove("hide");
 
+        document.querySelector("#retry").addEventListener("click", newGame);
 
-    } else if (score == 4) // antal for at vinde
+        //ryd op
+        document.querySelector("#retry2").classList.add("hide");
+
+        //ryd op
+
+    } else if (score == 5) { // antal for at vinde
         document.querySelector("#levelcomplete").classList.remove("hide");
 
-    document.querySelector("#mymusic").pause();
+        document.querySelector("#mymusic").pause();
 
-    document.querySelector("#retry").addEventListener("click", startGame)
 
-    document.querySelector("#sfx1").pause();
-    document.querySelector("#sfx2").pause();
-    document.querySelector("#sfx3").play();
+        document.querySelector("#sfx1").pause();
+        document.querySelector("#sfx2").pause();
+
+        document.querySelector("#sfx3").currentTime = 0;
+        document.querySelector("#sfx3").play();
+
+        document.querySelector("#retry").addEventListener("click", showStart);
+        document.querySelector("#retry2").classList.remove("hide");
+    }
 }
-
 
 
 
 function gameover() {
     console.log("gameover");
 
-    document.querySelector("#gameover").classList.add("hide");
+    document.querySelector("#gameover").classList.remove("hide");
+}
 
 
-
+function newGame() {
+    console.log("newGame");
+    location = location.href;
 }
